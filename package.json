@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Music theory needed to create chromatone empowered apps",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

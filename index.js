@@ -1,65 +1,42 @@
-export const notes = [
-  {
-    name: 'A',
-    pitch: 0,
-  },
-  {
-    name: 'A#',
-    pitch: 1,
-  },
-  {
-    name: 'B',
-    pitch: 2,
-  },
-  {
-    name: 'C',
-    pitch: 3,
-  },
-  {
-    name: 'C#',
-    pitch: 4,
-  },
-  {
-    name: 'D',
-    pitch: 5,
-  },
-  {
-    name: 'D#',
-    pitch: 6,
-  },
-  {
-    name: 'E',
-    pitch: 7,
-  },
-  {
-    name: 'F',
-    pitch: 8,
-  },
-  {
-    name: 'F#',
-    pitch: 9,
-  },
-  {
-    name: 'G',
-    pitch: 10,
-  },
-  {
-    name: 'G#',
-    pitch: 11,
-  },
-]
+export function noteColor(pitch = 0, octave = 3, velocity = 1) {
+  return (
+    'hsla(' +
+    pitch * 30 +
+    ',' +
+    velocity * 100 +
+    '%,' +
+    Math.abs(octave + 2) * 8 +
+    '%)'
+  )
+}
 
-export const justCents = [
-  0,
-  112,
-  204,
-  316,
-  386,
-  498,
-  590,
-  702,
-  814,
-  884,
-  1017,
-  1088,
-]
+export { default as notes } from './notes.js'
+export { default as chords } from './chords.js'
+export { default as scales } from './scales.js'
+
+export const tunings = {
+  pythagorean: {
+    cents: [0, 90, 204, 294, 408, 498, 588, 612, 702, 792, 906, 996, 1110],
+    pitches: [0, 1, 2, 3, 4, 5, 6, 6, 7, 8, 9, 10, 11],
+  },
+  just: {
+    cents: [0, 112, 204, 316, 386, 498, 590, 702, 814, 884, 1017, 1088],
+    values: [
+      '1/1',
+      '16/15',
+      '9/8',
+      '6/5',
+      '5/4',
+      '4/3',
+      '45/32',
+      '3/2',
+      '8/5',
+      '5/3',
+      '9/5',
+      '15/8',
+    ],
+  },
+  et: {
+    cents: [0, 100, 200, 300, 400, 500, 600, 700, 800, 900, 1000, 1100],
+  },
+}
