@@ -1,13 +1,7 @@
-export function noteColor(pitch = 0, octave = 3, velocity = 1) {
-  return (
-    'hsla(' +
-    pitch * 30 +
-    ',' +
-    velocity * 100 +
-    '%,' +
-    Math.abs(octave + 2) * 8 +
-    '%)'
-  )
+export function noteColor(pitch = 0, octave = 3, velocity = 1, alpha = 1) {
+  return `hsla(${pitch * 30},${velocity * 100}%,${
+    Math.abs(octave + 2) * 8
+  }%,${alpha})`
 }
 
 export { default as notes } from './notes.js'
