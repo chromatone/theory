@@ -1,2 +1,2 @@
-import { notes, chords } from './index.js'
-console.log(notes, chords)
+import { calcFreq } from './index.js'
+console.log(calcFreq(300))
