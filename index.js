@@ -1,5 +1,6 @@
 export * from './calculations.js'
-export { default as notes } from './notes.js'
+export * from './audio.js'
+export * from './notes.js'
 export { default as chords } from './chords.js'
 export { default as scales } from './scales.js'
 

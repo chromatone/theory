@@ -1,2 +1,2 @@
-import { calcFreq } from './index.js'
-console.log(calcFreq(300))
+import { initGetUserMedia } from './audio.js'
+console.log(initGetUserMedia)
