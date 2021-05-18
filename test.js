@@ -1,2 +1,2 @@
-import { initGetUserMedia } from './audio.js'
-console.log(initGetUserMedia)
+import { getRawPitch } from './index.js'
+console.log(getRawPitch(300))

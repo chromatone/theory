@@ -4,6 +4,10 @@ export * from './notes.js'
 export { default as chords } from './chords.js'
 export { default as scales } from './scales.js'
 
+export const midi = {
+  middleA: 69,
+}
+
 export const tunings = {
   pythagorean: {
     cents: [0, 90, 204, 294, 408, 498, 588, 612, 702, 792, 906, 996, 1110],
