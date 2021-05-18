@@ -26,6 +26,6 @@ export function freqColor(freq) {
   return pitchColor(freqPitch(freq))
 }
 
-export function freqPitch(freq, base = 440) {
-  return 12 * (Math.log(freq / base) / Math.log(2))
+export function freqPitch(freq, middleA = 440) {
+  return 12 * (Math.log(freq / middleA) / Math.log(2))
 }
