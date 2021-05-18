@@ -7,7 +7,7 @@ export function pitchFreq(
   let hz = 0
   const justCents = [0, 112, 204, 316, 386, 498, 590, 702, 814, 884, 1017, 1088]
   if (tuning == 'equal') {
-    hz = Number(middleA * Math.pow(2, octave - 4 + pitch / 12))
+    hz = Number(middleA * Math.pow(2, octave - 3 + pitch / 12))
   }
   if (tuning == 'just') {
     let diff = Number(Math.pow(Math.pow(2, 1 / 1200), justCents[pitch]))
@@ -17,7 +17,7 @@ export function pitchFreq(
 }
 
 export function pitchColor(pitch = 0, octave = 3, velocity = 1, alpha = 1) {
-  return `hsla(${pitch * 30},${velocity * 100}%,${
+  return `hsla(${(pitch % 12) * 30},${velocity * 100}%,${
     Math.abs(octave + 2) * 8
   }%,${alpha})`
 }
