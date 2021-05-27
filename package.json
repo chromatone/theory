@@ -1,6 +1,6 @@
 {
   "name": "chromatone-theory",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Music theory needed to create chromatone empowered apps",
   "main": "index.js",
   "type": "module",
