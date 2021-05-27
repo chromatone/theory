@@ -1,3 +1,12 @@
+export const midiA = 69
+
+export function pitchNoteOctave(pitch) {
+  return {
+    note: pitch > 0 ? pitch % 12 : 12 + (pitch % 12),
+    octave: Math.floor(pitch / 12) + 4,
+  }
+}
+
 export function pitchFreq(
   pitch = 0,
   octave = 3,
@@ -28,4 +37,8 @@ export function freqColor(freq) {
 
 export function freqPitch(freq, middleA = 440) {
   return 12 * (Math.log(freq / middleA) / Math.log(2))
+}
+
+export function isInChroma(chroma, tonic, note) {
+  return chroma.split('')[(24 + note - tonic) % 12] == '1'
 }

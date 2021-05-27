@@ -1,7 +1,14 @@
-import { pitchFreq, pitchColor, freqColor, freqPitch } from './index.js'
-const testNote = -8
+import {
+  pitchFreq,
+  pitchColor,
+  freqColor,
+  freqPitch,
+  pitchNoteOctave,
+} from './index.js'
+const testNote = 3
 
 console.log('testNote:', testNote)
+console.log('pitchNoteOctave:', pitchNoteOctave(testNote))
 console.log('pitchFreq:', pitchFreq(testNote))
 console.log('pitchColor:', pitchColor(testNote))
 console.log('freqPitch:', freqPitch(pitchFreq(testNote)))
