@@ -42,3 +42,11 @@ export function freqPitch(freq, middleA = 440) {
 export function isInChroma(chroma, tonic, note) {
   return chroma.split('')[(24 + note - tonic) % 12] == '1'
 }
+
+export function getCircleCoord(n = 0, total = 12, radius = 35, width = 100) {
+  let angle = ((n - total / 4) / (total / 2)) * Math.PI // Calculate the angle at which the element will be placed.
+  // For a semicircle, we would use (i / numNodes) * Math.PI.
+  let x = radius * Math.cos(angle) + width / 2 // Calculate the x position of the element.
+  let y = radius * Math.sin(angle) + width / 2 // Calculate the y position of the element.
+  return { x, y }
+}
