@@ -50,3 +50,7 @@ export function getCircleCoord(n = 0, total = 12, radius = 35, width = 100) {
   let y = radius * Math.sin(angle) + width / 2 // Calculate the y position of the element.
   return { x, y }
 }
+
+export function rotateArray(arr, count = 1) {
+  return [...arr.slice(count, arr.length), ...arr.slice(0, count)];
+};
