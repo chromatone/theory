@@ -6,7 +6,7 @@ import {
   freqPitch,
   pitchNoteOctave,
 } from './index.js'
-const testNote = 3
+const testNote = -3
 
 console.log('testNote:', testNote)
 console.log('pitchNoteOctave:', pitchNoteOctave(testNote))

@@ -25,7 +25,8 @@ export function pitchFreq(
   return hz
 }
 
-export function pitchColor(pitch = 0, octave = 3, velocity = 1, alpha = 1) {
+export function pitchColor(pitch = 0, octave, velocity = 1, alpha = 1) {
+  octave = octave || Math.floor(pitch / 12) + 4
   return `hsla(${(pitch % 12) * 30},${velocity * 100}%,${
     Math.abs(octave + 2) * 8
   }%,${alpha})`
@@ -52,5 +53,5 @@ export function getCircleCoord(n = 0, total = 12, radius = 35, width = 100) {
 }
 
 export function rotateArray(arr, count = 1) {
-  return [...arr.slice(count, arr.length), ...arr.slice(0, count)];
-};
+  return [...arr.slice(count, arr.length), ...arr.slice(0, count)]
+}
