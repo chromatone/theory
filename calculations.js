@@ -55,3 +55,14 @@ export function getCircleCoord(n = 0, total = 12, radius = 35, width = 100) {
 export function rotateArray(arr, count = 1) {
   return [...arr.slice(count, arr.length), ...arr.slice(0, count)]
 }
+
+export function clampNum(main, delta, min = 0, max = 100) {
+  let num = Number(main) + Number(delta)
+  if (num < min) {
+    num = min
+  }
+  if (num > max) {
+    num = max
+  }
+  return num
+}
